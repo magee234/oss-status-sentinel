@@ -1,0 +1,20 @@
+# OSS Status Sentinel 配置文件
+# 检查周期（秒）
+check_interval_seconds: 300 # 5分钟
+
+# 你想要监控的服务列表
+services:
+  - name: "Google 主页"
+    url: "https://www.google.com"
+    method: "GET"
+    expected_status: 200
+
+  - name: "GitHub API"
+    url: "https://api.github.com"
+    method: "GET"
+    expected_status: 200
+
+  - name: "你的项目文档站点"
+    url: "https://your-project-docs.com" # 替换成你的URL
+    method: "GET"
+    expected_status: 200
