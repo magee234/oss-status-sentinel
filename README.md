@@ -1,0 +1,2 @@
+这是一个轻量级的、可配置的监控工具，用于检查指定的开源项目（或任何网站/API）的在线状态。项目维护者可以通过一个简单的 config.yml 文件来列出他们想要监控的服务的 URL，这个脚本会定期检查这些 URL 是否可以正常访问，并记录下线时间。
+This is a lightweight, configurable monitoring tool for checking the online status of a specified open source project (or any website/API). Project maintainers can list the URLs of the services they want to monitor through a simple config.yml file, and this script will periodically check whether these URLs are accessible normally and record the offline time.
