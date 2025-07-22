@@ -1,2 +1,30 @@
-这是一个轻量级的、可配置的监控工具，用于检查指定的开源项目（或任何网站/API）的在线状态。项目维护者可以通过一个简单的 config.yml 文件来列出他们想要监控的服务的 URL，这个脚本会定期检查这些 URL 是否可以正常访问，并记录下线时间。
-This is a lightweight, configurable monitoring tool for checking the online status of a specified open source project (or any website/API). Project maintainers can list the URLs of the services they want to monitor through a simple config.yml file, and this script will periodically check whether these URLs are accessible normally and record the offline time.
+# OSS Status Sentinel
+
+OSS Status Sentinel (开源项目状态哨兵) 是一个轻量级的、可配置的监控工具，用于检查您的开源项目、个人网站或API端点的健康状况。
+
+## 目标
+
+这个项目旨在帮助开源维护者：
+- **主动发现问题**：在用户报告问题之前，自动检测并获得网站或API的停机通知。
+- **提升透明度**：可以用于生成一个公开的状态页面，向社区展示您服务的可靠性。
+- **简单易用**：通过一个简单的 `config.yml` 文件即可完成所有配置，无需复杂的设置。
+
+## 工作原理
+
+该工具会定期执行以下操作：
+1. 读取 `config.yml` 文件中的服务列表。
+2. 循环向每个服务的 URL 发送 HTTP 请求。
+3. 将返回的状态码与您期望的状态码进行比较。
+4. 如果状态不匹配或请求失败，会在控制台打印错误日志，并可以通过配置（未来功能）发送通知。
+
+## 如何使用
+1. 克隆本仓库。
+2. 安装依赖：`pip install requests pyyaml`
+3. 复制 `config.yml.example` 为 `config.yml`。
+4. 编辑 `config.yml`，填入您想要监控的服务信息。
+5. 运行脚本：`python main.py`
+
+## 未来计划
+- [ ] 增加对更多通知渠道的支持（如 Discord, Slack, Telegram）。
+- [ ] 创建一个简单的Web仪表盘来可视化状态历史。
+- [ ] 将监控历史记录写入数据库。
