@@ -41,12 +41,12 @@ python cli.py summary
 
 failures: 列出最近的失败记录。
 Generated bash
-# 显示最近20条失败记录
+显示最近20条失败记录
 python cli.py failures
-# 显示最近50条失败记录
+显示最近50条失败记录
 python cli.py failures -l 50
 
-未来计划
+# 未来计划
 将监控历史记录写入数据库。 (已完成)
 创建一个命令行工具 (CLI) 来查询数据库中的监控历史。 (已完成)
 增加对更多通知渠道的支持（如 Discord, Slack, Telegram）。
