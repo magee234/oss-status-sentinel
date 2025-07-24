@@ -35,8 +35,19 @@ OSS Status Sentinel (开源项目状态哨兵) 是一个轻量级的、可配置
   # 显示最近5条日志
   python cli.py logs --limit 5
 
-## 未来计划
-- [x] ~~将监控历史记录写入数据库。~~ (已完成)  
-- [ ] 增加对更多通知渠道的支持（如 Discord, Slack, Telegram）。
-- [ ] 创建一个简单的Web仪表盘来可视化状态历史。
-- [x] 创建一个命令行工具 (CLI) 来查询数据库中的监控历史。(已完成)
+summary: 显示每个服务的最新状态摘要。
+Generated bash
+python cli.py summary
+
+failures: 列出最近的失败记录。
+Generated bash
+# 显示最近20条失败记录
+python cli.py failures
+# 显示最近50条失败记录
+python cli.py failures -l 50
+
+未来计划
+将监控历史记录写入数据库。 (已完成)
+创建一个命令行工具 (CLI) 来查询数据库中的监控历史。 (已完成)
+增加对更多通知渠道的支持（如 Discord, Slack, Telegram）。
+创建一个简单的Web仪表盘来可视化状态历史。
